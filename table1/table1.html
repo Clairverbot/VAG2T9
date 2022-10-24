@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- Tableau Embedding API v3 Library -->
+    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+
+    <script type="module">
+        const viz = document.getElementById('tableauViz1')
+        let sheet = viz.workbook.activeSheet; 
+        sheet.applyFilterAsync("Container", "Boxes", FilterUpdateType.Replace);
+    </script>
+    
+  <body>
+
+    <div class="container-fluid">
+        <h1 class="mt-4 text-center"> 
+            Reintegration of Ex-Inmates into Singapore's Society 
+        </h1>
+
+        <!-- Navigation Bar -->
+        <nav class="nav justify-content-center mt-2">
+            <a class="nav-link" href="../home.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="./table1.html">Table 1</a>
+            <a class="nav-link" href="#">Table 2</a>
+            <a class="nav-link" href="#">Table 3</a>
+            <a class="nav-link" href="#">Table 4</a>
+        </nav>
+
+        <div class="container mt-5 mb-5 border border-1 border-dark">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <tableau-viz id="tableauViz"
+                    src="https://public.tableau.com/views/JannChia_Assignment1_Qn3a/Top10PlanningAreaswithHighestMalePopulation?:apiInternalVersion=1.117.0&:disableUrlActionsPopups=n&navSrc=Opt&:embed=y&navType=0&:suppressDefaultEditBehavior=n&mobile=n&:hideEditButton=n&:hideEditInDesktopButton=n&:jsdebug=n&:apiExternalVersion=3.3.0&:display_count=n&:origin=viz_share_link"
+                    width="200px" hide-tabs>
+                    </tableau-viz>
+                </div>
+                <div class="col"></div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col"></div>
+                <div class="col">
+                    <!-- Initialization of the Tableau visualization. -->
+                    <tableau-viz id="tableauViz1" src="https://public.tableau.com/views/RegionalSampleWorkbook/College?:language=en-GB&:display_count=n&:origin=viz_share_link"
+                        width="200px" hide-tabs>
+                    </tableau-viz>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
