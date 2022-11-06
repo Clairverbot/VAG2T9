@@ -39,6 +39,31 @@
             <a class="nav-link" href="../workprog/workprog.html">Work Programmes</a>
             <a class="nav-link" href="../cbp/cbp.html">Community-based Programmes</a>
         </nav>
+
+        <div class="container mt-5 mb-5 border border-1 border-dark">
+          <div class="row">
+              <div class="col"></div>
+              <div class="col">
+                  <tableau-viz id="tableauViz"
+                  src="https://public.tableau.com/views/SkillTrainingDashboard/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link"
+                  width="200px" hide-tabs>
+                  </tableau-viz>
+              </div>
+              <div class="col"></div>
+          </div>
+
+          <div class="row mt-5">
+              <div class="col"></div>
+              <div class="col">
+                  <!-- Initialization of the Tableau visualization. -->
+                  <tableau-viz id="tableauViz1" src="https://public.tableau.com/views/PercentageofinmatesreferredtoYRSGtoEmployabilitySkillsTraining/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link"
+                      width="200px" hide-tabs>
+                  </tableau-viz>
+              </div>
+              <div class="col"></div>
+          </div>
+      </div>
+
     </div>  
   </body>
 </html>
